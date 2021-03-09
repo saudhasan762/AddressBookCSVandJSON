@@ -2,7 +2,6 @@ package book;
 
 import com.opencsv.exceptions.CsvDataTypeMismatchException;
 import com.opencsv.exceptions.CsvRequiredFieldEmptyException;
-
 import java.io.IOException;
 import java.util.*;
 
@@ -32,7 +31,6 @@ public class AddressBookOperate {
         }
         return true;
     }
-
 
     public boolean edit(String first, String last, String address, String city, String state, String email, String zip, String phoneNumber) {
         if (finalist.size() == 0)

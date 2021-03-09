@@ -1,25 +1,16 @@
 package book;
 
-import com.opencsv.bean.CsvBindByName;
 
 public class Contact {
 
     private String first;
-
     private String last;
-
     private String address;
-
     private String city;
-
     private String state;
-
     private String zip;
-
     private String phoneNumber;
-
     private String email;
-
     Contact(){}
 
 
@@ -32,7 +23,6 @@ public class Contact {
         this.zip = zip;
         this.phoneNumber = phoneNumber;
         this.email = email;
-
     }
 
     public String getFirstName() {

@@ -16,7 +16,6 @@ public class AddressBookFileIO {
             String contactDataString = contact.toString().concat("\n");
             stringBuffer.append(contactDataString);
         });
-
         try {
             Files.write(Paths.get(ADDRESS_BOOK_FILE_NAME), stringBuffer.toString().getBytes());
         } catch (IOException e){
