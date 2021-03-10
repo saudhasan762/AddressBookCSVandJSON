@@ -34,14 +34,11 @@ public class AddressBook extends AddressBookOperate{
                     System.out.println("Working on AddressBook "+choice);
                     details(list1);
                     break;
-                }
-                else if(choice == 2) {
+                } else if(choice == 2) {
                     System.out.println("Working on AddressBook "+choice);
                     details(list2);
                     break;
-                }
-
-                else if(choice == 3) {
+                } else if(choice == 3) {
                     joined.addAll(list1);
                     joined.addAll(list2);
 
@@ -64,8 +61,7 @@ public class AddressBook extends AddressBookOperate{
                 } else if(choice == 0) {
                     System.out.println("System Exit");
                     break s;
-                }
-                else
+                } else
                     System.out.println("Invalid Choice");
             }
         }

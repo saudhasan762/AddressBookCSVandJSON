@@ -132,6 +132,7 @@ public class AddressBookOperate {
         System.out.println("Enter 8 to read data in a file");
         System.out.println("Enter 9 to Write data in CSV file");
         System.out.println("Enter 10 to Read data in CSV file");
+        System.out.println("Enter 11 to Write and Read Data from JSON");
         System.out.println("Enter 0 to switch Address Book");
         return scan.nextInt();
     }
@@ -157,6 +158,11 @@ public class AddressBookOperate {
             new AddressBookFileIO().readData();
             System.out.println("Read successfully from a file");
         }
+    }
+
+    public void csvToJsonConvert(){
+        new OpenCSV().csvToJson();
+        System.out.println("JSON File created Successfully");
     }
 
     public static void details(ArrayList<Contact> list) throws CsvRequiredFieldEmptyException, IOException, CsvDataTypeMismatchException {
@@ -280,6 +286,9 @@ public class AddressBookOperate {
                    break ;
                 } else if(choice == 10){
                     Book.readAddressBookInCSVFile();
+                    break ;
+                } else if(choice == 11){
+                    Book.csvToJsonConvert();
                     break ;
                 } else if (choice == 0) {
                     System.out.println("Return to main");

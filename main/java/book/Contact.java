@@ -1,7 +1,10 @@
 package book;
 
+import com.opencsv.bean.CsvBindByName;
 
-public class Contact {
+import java.io.Serializable;
+
+public class Contact implements Serializable {
 
     private String first;
     private String last;
@@ -11,10 +14,8 @@ public class Contact {
     private String zip;
     private String phoneNumber;
     private String email;
-    Contact(){}
 
-
-    Contact(String first, String last, String address, String city, String state,String email, String zip, String phoneNumber ){
+    Contact(String first, String last, String address, String city, String state,String zip, String phoneNumber, String email ){
         this.first = first;
         this.last = last;
         this.address = address;
@@ -74,16 +75,17 @@ public class Contact {
         this.email = email;
     }
 
+    @Override
     public String toString() {
         return "Contact{" +
-                "Name:'" + this.first + '\'' +
-                "Surname:'" + this.last + '\'' +
-                "Address:'" + this.address + '\'' +
-                "City:'" + this.city + '\'' +
-                "State:'" + this.state + '\'' +
-                "Zip:'" + this.zip + '\'' +
-                "Phone Number:'" + this.phoneNumber + '\'' +
-                "Email: " + this.email + '\'' +
+                "first='" + first + '\'' +
+                ", last='" + last + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zip='" + zip + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", email=" + email + '\'' +
                 '}';
     }
 }
