@@ -33,8 +33,6 @@ public class OpenCSV {
                         .withQuotechar(CSVWriter.NO_QUOTE_CHARACTER)
                         .build();
 
-              //  List<Contact> contactList = new ArrayList<>();
-               // contactList.add(new Contact("Saud","Hasan","Turner","Dehra","Uttra","248002","812563","saud@saud"));
                 beanToCsv.write(finalist);
             }
         }
@@ -58,31 +56,6 @@ public class OpenCSV {
                 }
             }
         }
-
-        /*public void parseToBean() throws IOException {
-            try (Reader reader = Files.newBufferedReader(Paths.get(ADDRESS_BOOK_CSV))
-            ){
-                CsvToBean<Contact> csvToBean = new CsvToBeanBuilder(reader)
-                        .withType(Contact.class)
-                        .withIgnoreLeadingWhiteSpace(true)
-                        .build();
-
-                Iterator<Contact> contactIterator = csvToBean.iterator();
-                while (contactIterator.hasNext()){
-                    Contact contact = contactIterator.next();
-                    System.out.println("Name: "+contact.getFirstName());
-                    System.out.println("Surname: "+contact.getLastName());
-                    System.out.println("Address: "+contact.getAddress());
-                    System.out.println("City: "+contact.getCity());
-                    System.out.println("State: "+contact.getState());
-                    System.out.println("Email: "+contact.getEmail());
-                    System.out.println("PhoneNo: "+contact.getPhoneNumber());
-                    System.out.println("Country: "+contact.getZip());
-                    System.out.println("=============================");
-
-                }
-            }
-        }*/
 
         public void csvToJson(){
             try {
